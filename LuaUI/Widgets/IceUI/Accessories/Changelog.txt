@@ -1,0 +1,356 @@
+  2009-06-11
+
+    + Added time until full level or depletion below current
+      income/pull indicator in resbar. Right click to toggle
+
+  2009-06-10
+
+    + Fixed handling of \n (\10) in colors with respect
+      to line-breaks in output.lua
+    + Added options for showing a minus in front of
+      negative numbers and for not showing SI units
+      (but only plain numbers)
+    + Added color highlighting of build and unit tooltips
+    + Added wind strength range to build tooltip for
+      Wind Generators
+    + Added tidal strength to build tooltip for Tidal
+      Generators
+    + Showing health in tooltip with gradient from red (0)
+      to green (full)
+    + Added indicator for MetalMaker energy level
+
+  2009-08-29
+
+    + Added my profile as a proper default profile and
+      the ability to load different profile in
+      tweak-mode.
+    + Added tooltips to the OS clock, ingame clock and
+      FPS windows.
+    + Added an option to player info and unit
+      collections to resize the window to other
+      directions.
+    + Added options to the console for number of rows
+      and number of rows for system messages.
+    + Added an option to the console to hide
+      information about all points. In case the user has
+      a dedicated widget for point visualization.
+    + The console shows chat redirected from autohosts
+      just like normal chat now.
+    + Added some explanatory text to desync messages.
+    + Added an option to the control panel to disable
+      background textures. This might conflict with
+      other widgets that replace the layout handler.
+    + Middle-clicking the FPS window now reloads
+      IceUI. Probably only useful for development.
+    + Added an option to the tooltip to hide the
+      ground information.
+    + Added an option to the tooltip to show up to 5
+      modoptions that don't have their default value at
+      gamestart. Additionally it shows the wind speed of
+      the current map.
+    + Added an option to click through the tooltip
+      window like with the console.
+    + Added my table inspector for widget developers.
+      Enable debug mode in gui_IceUI.lua line 47 and use
+      WG.Inspect(table) in your widget to see the
+      contents of table.
+    * Fixed broken font rendering.
+    * Removed the usage of display lists to avoid
+      errors in the multi-threaded version of Spring.
+    * Fixed a crash in widget options if the widget
+      doesn't add descriptions to list items.
+    * Fixed buildpic aspect ratio preset for Complete
+      Annihilation.
+    * Fixed the Widgets menu entry to show the IceUI
+      widget selector.
+    * The menu now always pops up under the menu
+      button.
+    * Unit name and description in the tooltip are no
+      longer seperated by " - - " in for example XTA.
+    * The Unit Collections window can now be properly
+      disabled.
+    * Added an option to limit the number of units
+      displayed in the Unit Collections window.
+    * The Unit Collections window starts with idle
+      builders selected now because that's probably the
+      most important information.
+    * Shift-clicking on icons in Unit Collections now
+      adds that unit to the current selection.
+    * Fixed the sound volume slider for the new Spring
+      behavior (thanks Masure).
+
+  2009-05-23
+
+    * Fixed the volume slider for Spring 0.79.0.
+
+  2008-10-24
+
+    + Added a full featured wrapper window for the
+      Spring control panel with pretty much all options
+      from ctrlpanel.txt.
+    + Added an option for the console to hide messages
+      about start locations.
+    + Added right-click on the teamicon in the player
+      list to ally/unally (untested).
+    + Added number of selected units to the tooltip
+      because I hid the little GUI element that showed
+      it before.
+    * Pressing F5 hides IceUI again.
+    * Changed IceUI layer to 5 so other widgets can
+      draw above it.
+    * Fixed that other widgets inherit the font
+      selected by IceUI.
+    * Fixed a crash when toggling IceUI a few times.
+    * Fixed size of the scrollbar and added the
+      missing images.
+    * Fixed go to unit commands in the player info and
+      unitcollections windows.
+    * Fixed dropdown boxes.
+    * Fixed that you could inherit a color from itself
+      (caused a crash).
+    * Windows no longer disappear when moved to the
+      screen edge.
+
+  2008-09-24
+
+    + Tweak-Mode now has three tabs. One with all the
+      IceUI options. One with a more fine-grained
+      control of colors. And one with options to control
+      other widgets. The last one is empty right now but
+      will fill if other widget developers use this
+      feature.
+    * Changed some components to use display lists
+      (should speed-up the drawing a bit).
+    * Teamicons should now be updated whenever you
+      change the team as a spectator.
+    * Renamed Tweak-Mode to Options in the game menu.
+    * The unit collections window doesn't leave any
+      content behind anymore when switching teams and
+      has the correct width in horizontal mode.
+
+  2008-09-16
+
+    * Small changes to make IceUI compatible with
+      0.77b1.
+
+  2008-04-29
+
+    + Added an option to the Unit Collection window to
+      use a horizontal layout.
+
+  2008-04-20
+
+    + Added a window with unit collections (building,
+      idle, damaged, stockpile for now). (used code from
+      Ray and jK)
+    + Added 'screenshot' to the game menu. (thx
+      Satirik)
+
+  2008-04-18
+
+    + Added a clock that shows the real time (not
+      in-game time).
+    * The minimap now resizes inside its window
+      instead of resizing the window. (thx Satirik)
+
+  2008-01-15
+
+    + Added an option for the console that hides the
+      console if it's empty.
+    * The mousewheel zooms now if CTRL is used for
+      history on the console.
+    * The options window in tweak-mode is now behind
+      all other windows and is a bit smaller.
+
+  2008-01-06
+
+    * Fixed a crash when the width for the minimap is
+      nil in the profile.
+
+  2008-01-05
+
+    + Added three small new windows: a volume slider,
+      an FPS and a clock replacement.
+    + Added an option to the console to disable
+      message seperation.
+    + Added an option to the console to also keep
+      system messages in the history.
+    + Added an option for the console that disables
+      history mode if CTRL isn't pressed.
+    * Fixed a crash when you have a widget with
+      undefined author.
+    * Fixed a crash when config contained certain
+      values.
+
+  2008-01-04
+
+    + Chat can now be scrolled with the mouse-wheel.
+    * Windows won't disappear while moving anymore
+    * Reverted borders so they don't blur with
+      anti-aliasing
+
+  2008-01-03
+
+    * Fixed several issues with 0.76b1.
+
+  2007-12-08
+
+    * It should work with the next Spring version now.
+
+  2007-10-15
+
+    + Little speedups by using local variables.
+    + The resource bars now have a share indicator.
+    * Update speed is no longer dependent on the
+      framerate.
+    * As a workaround IceUI is no longer drawn after
+      pressing F5 because LuaUI isn't hidden as it
+      should be in this Spring version.
+    * The menu can be closed with ESC now.
+    * The minimap aspect ratio should now be correct
+      for widescreen resolutions.
+    * Before the game begins, the player info window
+      shows the ping tab now.
+
+  2007-08-20
+
+    + Replaced the default Widget Selector. You can
+      select IceUIs components now. Enter "/luaui
+      selector" to get the default one in case mine
+      bugs.
+    * Raising and lowering windows sends them to the
+      top/bottom now.
+    * Fixed a bug where IceUI would crash when
+      speccing a game with AIs.
+
+  2007-08-17
+
+    * Undocked tabs don't remember their position
+      anymore.
+    * Ping and CPU usage is now shown for the correct
+      player. I confused teams with players.
+    + Added trepans new Lua font rendering.
+    + The ping and CPU usage in the Player Info Window
+      are now color-coded.
+    * The performance should be slightly better now.
+    * The tooltip can show 5 lines now but the font is
+      bigger if there are less.
+    * The special unit tooltip only shows the unit
+      name now as in IceXuicks design. I will completely
+      redo it sometime soon though.
+
+  2007-08-13
+
+    + You can click through the console (chat window)
+      now.
+    * The teams on the Player Info Window are now
+      sorted by allies when speccing.
+    * Updated the authors of the Metal Maker widget so
+      the commands should work again.
+    * Instead of middle-clicking the console you now
+      can middle-click the tooltip to get to the last
+      point.
+
+  2007-07-16
+
+    * Updated for 0.75b1. Still needs some work.
+    * Commands that require another widget now only
+      show "(requires ...)" if the widget isn't
+      installed.
+
+  2007-07-07
+
+    * I forgot to implement the actual resource
+      sharing. Now it should work.
+
+  2007-07-06
+
+    + Tabs can be detached to new windows now. The
+      positioning and other stuff still needs some work
+      though.
+    + The tooltip also shows the storage now on the
+      allied resource bars.
+    + There's a new tab with player names in the
+      Player Info window. This will become useful once
+      it can be shown in a second column.
+    + Clicking on the allied resource bars now gives
+      resources to that player.
+    * TeamLogos of specs don't have the enemy overlay
+      anymore.
+    * Dead players are no longer shown as specs in the
+      chat window. Though it's now the other way around
+      if Team0 dies. I still need to find a fix for
+      that.
+    * The Player Info window now shows player names
+      instead of "#3".
+
+  2007-06-30
+
+    * The background of bars are now real gradients.
+      No more ugly lines in them.
+
+  2007-06-29
+
+    * Minimap aspect ratio should really work now
+    + Control TheFatControllers Metal Maker widget by
+      right/middle clicking your energy bar
+    * Console now shows names by default (can still be
+      toggled in Tweak-Mode)
+    * Minimap has the correct aspect ratio now (with
+      fixed width)
+    * Game menu is now under the menu button
+
+  2007-06-26
+
+    * Fixed height problem with Player Info window
+    + Player Info window now shows all players for
+      specs (resources won't be updated for the
+      "enemies" though because LuaUI v0.1 doesn't permit
+      that)
+    + TeamLogos now show a skull if the team is dead
+
+  GAP because of HD crash
+
+  2007-06-05
+
+    * Fixed default positions and sizes
+    * Options, Colors, Positions and Sizes are being
+      saved now
+    * Several new options for the console
+      - Hide Build pos blocked messages
+      - Display spectator chat like other chat
+      - Show playernames
+    * New option for resource bars
+      - Automatically switch to stall factor when stalling
+    * Made TeamLogos for spectators and overlays to
+      highlight enemies
+    * Disabled testing and debug windows by default
+    * Note for developers:
+      window:New() gets a name for the window as first
+      parameter now
+
+  2007-06-02
+
+    * GUI elements in mods are now loaded if there are any
+
+  2007-05-28
+
+    * Implemented boolean Options
+      - Right-click console in Tweak-Mode to test
+    * Content of container components can now be changed
+      (still needs some work)
+    * Minor fixes
+      - Another fix for invisble stuff showing up
+      - Colorpicker tooltip altered
+
+  2007-05-24
+
+    * Replaced gl.Shape calls with gl.Rect and gl.TexRect
+    * Player Info shows Ping correct now even if the
+      game speed is below 1 (SVN only)
+
+  GAP (switch to SVN)
+
+    * resource bars shouldn't go over their container now
+    * buildmenu doesn't crash if there isn't enough space
+      for all icons

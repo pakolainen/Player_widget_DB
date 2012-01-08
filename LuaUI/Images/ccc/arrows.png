@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  
+
+  <head>
+    <title>
+      /trunk/mods/ca/LuaUI/Images/ccc/arrows.png – Complete Annihilation
+    </title>
+        <link rel="search" href="/search" />
+        <link rel="help" href="/wiki/TracGuide" />
+        <link rel="alternate" href="/export/8211/trunk/mods/ca/LuaUI/Images/ccc/arrows.png" type="image/png; charset=utf-8" title="Original Format" />
+        <link rel="up" href="/browser/trunk/mods/ca/LuaUI/Images/ccc" title="Parent directory" />
+        <link rel="start" href="/wiki" />
+        <link rel="stylesheet" href="/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/code.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/browser.css" type="text/css" />
+        <link rel="shortcut icon" href="/chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="/chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="/search/opensearch" title="Search Complete Annihilation" />
+    <script type="text/javascript" src="/chrome/common/js/jquery.js"></script><script type="text/javascript" src="/chrome/common/js/trac.js"></script><script type="text/javascript" src="/chrome/common/js/search.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#jumploc input").hide();
+        $("#jumploc select").change(function () {
+          this.parentNode.parentNode.submit();
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="/"><img src="http://files.caspring.org/logos/random.new.php" alt="CASpring" /></a>
+      </div>
+      <form id="search" action="/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="/login">Login</a></li><li><a href="/prefs">Preferences</a></li><li><a href="/wiki/TracGuide">Help/Guide</a></li><li><a href="/about">About Trac</a></li><li class="last"><a href="/register">Register</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first"><a href="/wiki">Wiki</a></li><li><a href="/timeline">Timeline</a></li><li><a href="/roadmap">Roadmap</a></li><li class="active"><a href="/browser">Browse Source</a></li><li><a href="/report">View Tickets</a></li><li><a href="/search">Search</a></li><li class="last"><a href="/discussion">Discussion</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><a href="/changeset/7820/trunk/mods/ca/LuaUI/Images/ccc/arrows.png">Last Change</a></li><li><a href="/browser/trunk/mods/ca/LuaUI/Images/ccc/arrows.png?annotate=blame&amp;rev=7820" title="Annotate each line with the last changed revision (this can be time consuming...)">Annotate</a></li><li class="last"><a href="/log/trunk/mods/ca/LuaUI/Images/ccc/arrows.png">Revision Log</a></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="browser">
+      <h1>
+    <a class="pathentry first" title="Go to root directory" href="/browser">root</a><span class="pathentry sep">/</span><a class="pathentry" title="View trunk" href="/browser/trunk">trunk</a><span class="pathentry sep">/</span><a class="pathentry" title="View mods" href="/browser/trunk/mods">mods</a><span class="pathentry sep">/</span><a class="pathentry" title="View ca" href="/browser/trunk/mods/ca">ca</a><span class="pathentry sep">/</span><a class="pathentry" title="View LuaUI" href="/browser/trunk/mods/ca/LuaUI">LuaUI</a><span class="pathentry sep">/</span><a class="pathentry" title="View Images" href="/browser/trunk/mods/ca/LuaUI/Images">Images</a><span class="pathentry sep">/</span><a class="pathentry" title="View ccc" href="/browser/trunk/mods/ca/LuaUI/Images/ccc">ccc</a><span class="pathentry sep">/</span><a class="pathentry" title="View arrows.png" href="/browser/trunk/mods/ca/LuaUI/Images/ccc/arrows.png">arrows.png</a>
+    <br style="clear: both" />
+  </h1>
+      <div id="jumprev">
+        <form action="" method="get">
+          <div>
+            <label for="rev">
+              View revision:</label>
+            <input type="text" id="rev" name="rev" size="6" />
+          </div>
+        </form>
+      </div>
+      <div id="jumploc">
+        <form action="" method="get">
+          <div class="buttons">
+            <label for="preselected">Visit:</label>
+            <select id="preselected" name="preselected">
+              <option selected="selected"></option>
+              <optgroup label="branches">
+                <option value="/browser/trunk">trunk</option>
+              </optgroup><optgroup label="tags">
+                <option value="/browser/tags/beta1?rev=242">tags/beta1</option><option value="/browser/tags/beta2?rev=468">tags/beta2</option><option value="/browser/tags/beta2.1?rev=482">tags/beta2.1</option><option value="/browser/tags/beta2.2?rev=608">tags/beta2.2</option>
+              </optgroup>
+            </select>
+            <input type="submit" value="Go!" title="Jump to the chosen preselected path" />
+          </div>
+        </form>
+      </div>
+      <table id="info" summary="Revision info">
+        <tr>
+          <th scope="col">
+            Revision <a href="/changeset/7820">7820</a>, <span title="1693 bytes">1.7 KB</span>
+            (checked in by carrepairer, <a class="timeline" href="/timeline?from=2010-05-16T19%3A42%3A36Z&amp;precision=second" title="2010-05-16T19:42:36Z in Timeline">3 months</a> ago)
+          </th>
+        </tr>
+        <tr>
+          <td class="message searchable">
+              <p>
+CC Cam: Better code, less images.<br />
+</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <ul class="props">
+              <li>
+                  Property <strong>svn:mime-type</strong> set to
+                    <em><code>application/octet-stream</code></em>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <div id="preview" class="searchable">
+    <div class="image-file"><img src="/export/8211/trunk/mods/ca/LuaUI/Images/ccc/arrows.png" alt="trunk/mods/ca/LuaUI/Images/ccc/arrows.png" /></div>
+      </div>
+      <div id="help">
+        <strong>Note:</strong> See <a href="/wiki/TracBrowser">TracBrowser</a>
+        for help on using the browser.
+      </div>
+      <div id="anydiff">
+        <form action="/diff" method="get">
+          <div class="buttons">
+            <input type="hidden" name="new_path" value="/trunk/mods/ca/LuaUI/Images/ccc/arrows.png" />
+            <input type="hidden" name="old_path" value="/trunk/mods/ca/LuaUI/Images/ccc/arrows.png" />
+            <input type="hidden" name="new_rev" value="7820" />
+            <input type="hidden" name="old_rev" value="7820" />
+            <input type="submit" value="View changes..." title="Select paths and revs for Diff" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="/export/8211/trunk/mods/ca/LuaUI/Images/ccc/arrows.png">Original Format</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">
+        Powered by <a href="/about"><strong>Trac 0.11.4</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.
+      </p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>
