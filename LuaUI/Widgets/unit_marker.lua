@@ -2,13 +2,13 @@ local versionNumber = "1.31"
 
 function widget:GetInfo()
 	return {
-		name      = "Unit Marker",
+		name      = "Unit Marker (BA)",
 		desc      = "[v" .. string.format("%s", versionNumber ) .. "] Marks spotted units of interest.",
 		author    = "very_bad_soldier",
 		date      = "October 21, 2007",
 		license   = "GNU GPL v2",
 		layer     = 0,
-		enabled   = true
+		enabled   = false
 	}
 end
 
@@ -33,39 +33,6 @@ unitList["BA"]["armamd"] = { markerText = "Anti Nuke" }
 unitList["BA"]["corfmd"] = { markerText = "Anti Nuke" }
 unitList["BA"]["armsilo"] = { markerText = "Nuke" }
 unitList["BA"]["corsilo"] = { markerText = "Nuke" }
-
-unitList["XTA"] = {} --initialize table
-unitList["XTA"]["arm_protector"] = 				{ markerText = "Anti Nuke" }
-unitList["XTA"]["core_fortitude_missile_defense"] = 	{ markerText = "Anti Nuke" }
-unitList["XTA"]["arm_retaliator"] = 			{ markerText = "Nuke" }
-unitList["XTA"]["core_silencer"] = 				{ markerText = "Nuke" }
-unitList["XTA"]["arm_stunner"] = 				{ markerText = "Mini-Nuke" }
-unitList["XTA"]["core_neutron"] = 				{ markerText = "Mini-Nuke" }
-unitList["XTA"]["arm_big_bertha"] = 			{ markerText = "Big Bertha" }
-unitList["XTA"]["core_intimidator"] = 			{ markerText = "Intimidator" }
-unitList["XTA"]["arm_sentinel"] = 				{ markerText = "HLT" }
-unitList["XTA"]["core_gaat_gun"] = 				{ markerText = "HLT" }
-unitList["XTA"]["arm_ambusher"] = 				{ markerText = "Pop Up" }
-unitList["XTA"]["core_toaster"] = 				{ markerText = "Pop Up" }
-unitList["XTA"]["arm_stingray"] = 				{ markerText = "HLT" }
-unitList["XTA"]["core_thunderbolt"] = 			{ markerText = "HLT" }
-unitList["XTA"]["arm_annihilator"] = 			{ markerText = "Anni" }
-unitList["XTA"]["arm_cloakable_fusion_reactor"] = 	{ markerText = "Fusion" }
-unitList["XTA"]["arm_vulcan"] = 				{ markerText = "Vulcan" }
-unitList["XTA"]["arm_repulsor"] 			= 	{ markerText = "Anti Nuke" }
-unitList["XTA"]["core_resistor"] = 				{ markerText = "Anti Nuke" }
-unitList["XTA"]["core_cloakable_fusion_power_plant"]= { markerText = "Fusion" }
-unitList["XTA"]["core_viper"] = 				{ markerText = "Viper" }
-unitList["XTA"]["core_immolator"]			    = { markerText = "Immolator" }
-unitList["XTA"]["core_doomsday_machine"] = 		{ markerText = "Doomsday" }
-unitList["XTA"]["core_buzzsaw"]			    = { markerText = "Buzzsaw" }
-unitList["XTA"]["core_krogoth_gantr"] 	= 		{ markerText = "Krogot Lab" }
-
-unitList["CA"] = {} --initialize table
-unitList["CA"]["armamd"] = { markerText = "Anti Nuke" }
-unitList["CA"]["corfmd"] = { markerText = "Anti Nuke" }
-unitList["CA"]["armsilo"] = { markerText = "Nuke" }
-unitList["CA"]["corsilo"] = { markerText = "Nuke" }
 --END OF MARKER LIST---------------------------------------
 
 local markerTimePerId = 0.2 --400ms

@@ -1,8 +1,8 @@
 function widget:GetInfo()
   return {
     name      = "State Reverse Toggle",
-    desc      = "Makes fire and movestates reverse toggleable",
-    author    = "Google Frog",
+    desc      = "Makes all buttons with 3 or more states reverse toggleable",
+    author    = "Google Frog, Deadnight Warrior",
     date      = "Oct 2, 2009",
     license   = "GNU GPL, v2 or later",
     layer     = 0,
@@ -12,46 +12,26 @@ end
 
 local spGetSelectedUnits = Spring.GetSelectedUnits
 local spGiveOrderToUnit = Spring.GiveOrderToUnit
-
-local CMD_FIRE_STATE = CMD.FIRE_STATE
-local CMD_MOVE_STATE = CMD.MOVE_STATE
+local spGetActiveCmdDesc = Spring.GetActiveCmdDesc
+local spGetCmdDescIndex = Spring.GetCmdDescIndex
 
 function widget:CommandNotify(id, params, options)
-	
-	if id == CMD_FIRE_STATE then
-		if options.right then
-			local units = spGetSelectedUnits()
-			local state = params[1] 
-			if state == 0 then 
-				state = 1
-			elseif state == 1 then 
-				state = 2
-			else 
-				state = 0
+
+	local index = spGetCmdDescIndex(id)
+	if index then
+		local comButton = spGetActiveCmdDesc(index)
+		if comButton and comButton.params and #comButton.params>3 then
+			if options.right then
+				local units = spGetSelectedUnits()
+				local state = params[1] -2
+				if state < 0 then 
+					state = state + #comButton.params - 1
+				end
+				for _,sid in ipairs(units) do
+					spGiveOrderToUnit(sid, id, { state }, {})	
+				end
+				return true
 			end
-			for _,sid in ipairs(units) do
-				spGiveOrderToUnit(sid, CMD_FIRE_STATE, { state }, {})	
-			end
-			return true
-		end
-	end	
-	
-	if id == CMD_MOVE_STATE then
-		if options.right then
-			local units = spGetSelectedUnits()
-			local state = params[1]
-			if state == 0 then 
-				state = 1
-			elseif state == 1 then 
-				state = 2
-			else 
-				state = 0
-			end
-			for _,sid in ipairs(units) do
-				spGiveOrderToUnit(sid, CMD_MOVE_STATE, { state }, {})	
-			end
-			return true
 		end
 	end
-
 end

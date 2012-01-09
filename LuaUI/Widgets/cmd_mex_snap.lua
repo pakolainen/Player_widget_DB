@@ -4,7 +4,7 @@ function widget:GetInfo()
 		name      = "Mex Snap",
 		desc      = "Snaps mexes to give 100% metal",
 		author    = "Niobium",
-		version   = "v1.2",
+		version   = "v1.1",
 		date      = "November 2010",
 		license   = "GNU GPL, v2 or later",
 		layer     = 0,
