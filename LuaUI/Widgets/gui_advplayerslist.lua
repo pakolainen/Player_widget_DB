@@ -15,13 +15,16 @@ function widget:GetInfo()
 		desc      = "Players list with useful information / shortcuts. Use tweakmode (ctrl+F11) to customize.",
 		author    = "Marmoth.",
 		date      = "January 16, 2011",
-		version   = "8.0",
+		version   = "8.1",
 		license   = "GNU GPL, v2 or later",
 		layer     = -4,
-		enabled   = false,  --  loaded by default?
+		enabled   = true,  --  loaded by default?
 		handler   = true,
 	}
 end
+
+-- Changelog:
+-- 8.0 -> 8.1 [teh]decay: fix bug when more then 32 players (and/or specs) present
 
 --------------------------------------------------------------------------------
 -- SPEED UPS
@@ -416,7 +419,7 @@ function InitializePlayers()
 	myPlayerID = Spring_GetLocalPlayerID()
 	myTeamID = Spring_GetLocalTeamID()
 	myAllyTeamID = Spring_GetLocalAllyTeamID()
-	for i = 0, 64 do
+	for i = 0, 128 do
 		player[i] = {} 
 	end
 	GetAllPlayers()
@@ -428,7 +431,7 @@ function GetAllPlayers()
 	teamN = table.maxn(allteams) - 1               --remove gaia
 	for i = 0,teamN-1 do
 		local teamPlayers = Spring_GetPlayerList(i, true)
-		player[i + 32] = CreatePlayerFromTeam(i)
+		player[i + 64] = CreatePlayerFromTeam(i)
 		for _,playerID in ipairs(teamPlayers) do
 			player[playerID] = CreatePlayer(playerID)
 		end
@@ -709,8 +712,8 @@ function SortPlayers(teamID,allyTeamID,vOffset)
 	if isAi == true then
 		vOffset = vOffset + playerOffset
 		table.insert(drawListOffset, vOffset)
-		table.insert(drawList, 32 + teamID) -- new AI team (instead of players)
-		player[32 + teamID].posY = vOffset
+		table.insert(drawList, 64 + teamID) -- new AI team (instead of players)
+		player[64 + teamID].posY = vOffset
 		noPlayer = false
 	end
 	
@@ -718,8 +721,8 @@ function SortPlayers(teamID,allyTeamID,vOffset)
 	if noPlayer == true then
 		vOffset = vOffset + playerOffset
 		table.insert(drawListOffset, vOffset)
-		table.insert(drawList, 32 + teamID)  -- no players team
-		player[32 + teamID].posY = vOffset
+		table.insert(drawList, 64 + teamID)  -- no players team
+		player[64 + teamID].posY = vOffset
 	end
 	return vOffset
 end
@@ -828,7 +831,7 @@ function CheckTime()
 		else
 			blink = true
 		end
-		for playerID =0, 31 do
+		for playerID =0, 63 do
 			if player[playerID] ~= nil then
 				if player[playerID].pointTime ~= nil then
 					if player[playerID].pointTime <= now then
@@ -981,7 +984,7 @@ function DrawPlayer(playerID, leader, vOffset)
 		end
 	end
 	gl_Color(1,1,1,1)
-	if playerID < 32 then
+	if playerID < 64 then
 		if m_chat.active == true and mySpecStatus == false then
 			if playerID ~= myPlayerID then
 				DrawChatButton(posY)
@@ -1503,7 +1506,7 @@ function widget:MousePress(x,y,button)
 				else
 					t = false
 					if m_point.active == true then
-						if i > -1 and i < 32 then
+						if i > -1 and i < 64 then
 							clickedPlayer = player[i]
 							if clickedPlayer.pointTime ~= nil then
 								posY = widgetPosY + widgetHeight - clickedPlayer.posY
@@ -1582,7 +1585,7 @@ function widget:MousePress(x,y,button)
 					t = true
 				else
 					t = false
-					if i > -1 and i < 32 then
+					if i > -1 and i < 64 then
 						clickedPlayer = player[i]
 						posY = widgetPosY + widgetHeight - clickedPlayer.posY
 						if m_chat.active == true then
@@ -1922,7 +1925,7 @@ end
 
 function CheckPlayersChange()
 	local sorting = false
-	for i = 0,31 do
+	for i = 0,63 do
 		local name,active,spec,teamID,allyTeamID,pingTime,cpuUsage, country, rank = Spring_GetPlayerInfo(i)
 		if active == false then
 			if player[i].name ~= nil then                                             -- NON SPEC PLAYER LEAVING
@@ -2058,4 +2061,4 @@ end
 
 
 -- Coord in % (resize) geometry will not be done
--- ajouter les décryptages de messages "widget:AddConsoleLine(line,priority)" appelé à chaque fois qu'il doit ajouter une ligne
+-- ajouter les dÃ©cryptages de messages "widget:AddConsoleLine(line,priority)" appelÃ© Ã  chaque fois qu'il doit ajouter une ligne
